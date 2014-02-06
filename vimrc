@@ -3,6 +3,13 @@ execute pathogen#infect()
 
 colorscheme blackboard
 
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+"high light column 80
+:set colorcolumn=80
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
