@@ -31,3 +31,12 @@ if has("autocmd")
   autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab
    
 endif
+
+" font settings
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
