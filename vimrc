@@ -13,7 +13,7 @@ nnoremap <leader>v <Plug>TaskList
 set listchars=tab:▸\ ,eol:¬
 
 " set tab stop, soft tab stop, shift width and replace tabs with spaces
-set ts=4 sts=4 sw=4 expandtab
+set ts=2 sts=2 sw=2 expandtab
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -24,3 +24,6 @@ if has("autocmd")
   autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab
    
 endif
+
+" draw a vertical line at 80 columns
+set colorcolumn=80
