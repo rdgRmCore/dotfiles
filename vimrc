@@ -3,6 +3,13 @@ execute pathogen#infect()
 
 colorscheme blackboard
 
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+"high light column 80
+:set colorcolumn=80
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
@@ -27,3 +34,12 @@ endif
 
 " draw a vertical line at 80 columns
 set colorcolumn=80
+
+" font settings
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
